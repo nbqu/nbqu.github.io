@@ -148,7 +148,14 @@ hr {
   list-style: none;
 }
 
-.post-date {
+.page-path {
+  color: #9a9a9a;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size:0.8rem;
+  float: right;
+}
+
+.post-date{
   display: block;
   margin-top:3px;
   margin-bottom: 1rem;
@@ -175,6 +182,8 @@ hr {
 .related-posts a {
   text-decoration: none;
 }
+
+
 
 /*
   Pagination
