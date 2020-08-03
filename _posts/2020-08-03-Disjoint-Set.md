@@ -21,20 +21,20 @@ image: develop.jpg
 
 &nbsp;&nbsp;&nbsp;&nbsp;두 개의 집합을 합칠 때에, 포인터를 어떤 방향으로 연결하느냐에 따라 ``Find(X)``의 효율성이 달라진다고 볼 수 있다. 이를테면 두 개의 집합(트리)가 있을 때, 크기가 큰 집합을 크기가 작은 집합에 붙이면 반대로 붙였을 때 보다 합집합의 높이가 커질 수 있다. 이렇게 되면 집합의 root node를 찾는 시간이 증가하게 될 것이다.
 
-![img1](./0803/img1.jpeg)
+![img1](https://user-images.githubusercontent.com/31720981/89159852-0fd59180-d5ab-11ea-92d6-156f1fa05b3f.jpeg)
 
-> [5]를 [1]에 붙이면 높이가 2가 되지만, [1]을 [5]에 붙이면 높이가 3이 되어 4의 root node를 찾는데 시간이 더 소요된다.
+> (5)를 (1)에 붙이면 높이가 2가 되지만, (1)을 (5)에 붙이면 높이가 3이 되어 (4)의 root node를 찾는데 시간이 더 소요된다.
 
-![img2](./0803/img2.png)
+![img2](https://user-images.githubusercontent.com/31720981/89159861-12d08200-d5ab-11ea-8eba-d8a7bef65fa6.png)
 그래서 효율적인 Union 함수는 위와 같이 쓸 수 있다.
 
 ## Path Compression
 &nbsp;&nbsp;&nbsp;&nbsp;부모관계가 복잡해지면 그에 따라서 트리의 구성이 비효율적이게 변할 수 있다. 이 때 ``Find(X)`` 함수를 실행시키면서 경로를 압축할 수 있다. root node를 찾으면서, 하위의 node를 root로 바로 연결시키는 것이다.
 
-![img3](./0803/img3.png)
-> 위는 ``Find(9)``를 실행시킨 모습이다. (9)에서부터 부모에 있는 노드들(6, 8)을 root와 바로 연결시켰다. 이로써 트릐의 높이는 4에서 2로 줄어들었다!
+![img3](https://user-images.githubusercontent.com/31720981/89159863-1401af00-d5ab-11ea-8d10-859d3df4555e.png)
+> 위는 ``Find(9)``를 실행시킨 모습이다. (9)에서부터 부모에 있는 노드들(6, 8)을 root와 바로 연결시켰다. 이로써 트리의 높이는 4에서 2로 줄어들었다!
 
-![img4](./0803/img4.png)
+![img4](https://user-images.githubusercontent.com/31720981/89159869-149a4580-d5ab-11ea-888e-03313db90528.png)
 
 ### Reference
 - *"Data Structrues & Their Algorithms", Harry R. Lewis, Larry Denenberg, 1991*
