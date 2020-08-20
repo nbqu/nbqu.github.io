@@ -17,8 +17,9 @@
   Base
 */
 
+
 body {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "Nanum Gothic Coding", "PT Serif", Georgia, "Times New Roman", serif;
   font-size: 18px;
   color: #515151;
   line-height: 1.75rem;
@@ -137,12 +138,14 @@ hr {
 /*
   Post
 */
-
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400');
 .post-container {
+  font-family: "Nanum Gothic Coding";
   margin-bottom: 4rem;
 }
 
 .posts {
+  font-family: "Nanum Gothic Coding";
   margin-bottom: 5rem;
   padding: 0px;
   list-style: none;
